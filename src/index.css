@@ -1,13 +1,162 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Light'), local('Helvetica-Neue-Light'),
+      url('fonts/HelveticaNeueCyr-Light.woff2') format('woff2'),
+      url('fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+      url('fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Black'), local('Helvetica-Neue-Black'),
+      url('fonts/HelveticaNeueCyr-Black.woff2') format('woff2'),
+      url('fonts/HelveticaNeueCyr-Black.woff') format('woff'),
+      url('fonts/HelveticaNeueCyr-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.name {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  color: rgb(52, 151, 168);
+  margin-bottom: 34px;
+  margin-left: 60px;
+}
+
+.name span {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(102, 102, 102);
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%)
+}
+
+form {
+  border: 1px solid rgba(153, 153, 153, 0.33);
+  border-radius: 5.51px;
+  background-color: rgb(255, 255, 255);
+  padding: 34px 60px;
+  width: fit-content;
+}
+
+.icon {
+  color: rgba(153, 153, 153, 0.28);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+} 
+
+.check-false, .check-true {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.check-false {
+  color: red;
+}
+
+.check-true {
+  color: green;
+}
+
+.check-container {
+  position: relative;
+}
+
+.check-container .fas {
+  position: absolute;
+}
+
+input._red:focus {
+  border: 1px solid red;
+  outline: none;
+}
+
+input._green:focus {
+  border: 1px solid green;
+  outline: none;
+}
+
+input {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+  letter-spacing: -0.14px;
+  border: 1px solid rgba(153, 153, 153, 0.28);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 251px;
+  height: 40px;
+  padding-left: 40px;
+}
+
+.input-outer {
+  position: relative;
+}
+
+.email-block {
+  margin-bottom: 0;
+}
+
+#email-error {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: red;
+  padding: 5px 0 7px 2px;
+}
+
+._hidden {
+  visibility: hidden;
+}
+
+._visible {
+  visibility: visible;
+}
+
+.password-block {
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.18px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(52, 151, 168);
+  width: 85px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  color: rgb(102, 102, 102);
+  margin-top: 10px;
+}
+
+.forgot-password span {
+  color: rgb(52, 151, 168);
+  cursor: pointer;
 }
